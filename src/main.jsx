@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import TestComponent from '../blocks/testcomponent/testcomponent-react';
+// import React from 'react';
+import { createRoot } from 'react-dom/client';
 import decorate from '../blocks/testcomponent/testcomponent';
+import TestComponent from "./testcomponent-react";
 
-const App = () => <div>Hello, Vite + React!</div>;
+// const App = () => <div>Hello, Vite + React!</div>;
 
 const block = document.querySelector('#root');
 decorate(block);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<TestComponent />);
+// const root = createRoot(document.getElementById('root'));
+// root.render(<TestComponent />);
