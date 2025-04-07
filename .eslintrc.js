@@ -4,6 +4,8 @@ module.exports = {
     'airbnb-base',
     'plugin:json/recommended',
     'plugin:xwalk/recommended',
+    'eslint:recommended',
+    'plugin:react/recommended',
   ],
   env: {
     browser: true,
@@ -16,12 +18,14 @@ module.exports = {
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   rules: {
     'import/extensions': ['error', { js: 'always' }], // require js file extensions in imports
     'linebreak-style': ['error', 'unix'], // enforce unix linebreaks
     'no-param-reassign': [2, { props: false }], // allow modifying properties of param
   },
-  plugins: ["react"],
-  extends: ["eslint:recommended", "plugin:react/recommended"]
+  plugins: ['react'],
 };
