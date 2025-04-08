@@ -1,4 +1,14 @@
 export default function decorate(block) {
+  console.log('Block:', block);
+  console.log('Block dataset:', block.dataset);
+  console.log('Inner HTML:', block.innerHTML);
+
+  const title = block.dataset.title || 'Hello, React!';
+  const subtitle = block.dataset.subtitle || 'This is a dynamic example with an image and button.';
+
+  console.log('title', title);
+  console.log('subtitle', subtitle);
+
   block.innerHTML = `
     <div id="my-partial" class="my-partial">
       <p>Loading React component...</p>
@@ -13,21 +23,31 @@ export default function decorate(block) {
   const reactDomScript = document.createElement('script');
   reactDomScript.src = 'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js';
 
+  const tailWindScript = document.createElement('script');
+  tailWindScript.src = 'https://cdn.tailwindcss.com';
+
   // After ReactDOM is loaded, dynamically import the module and render
   reactDomScript.onload = () => {
     const moduleScript = document.createElement('script');
     moduleScript.type = 'module';
     moduleScript.textContent = `
-      import TestComponent from '/content/cvs-aem.resource/scripts/testcomponent-react.js';
+      import TestComponent from '/content/cvs-aem.resource/scripts/testcomponent-react2.js';
 
       const root = document.getElementById('my-partial');
-      const element = React.createElement(TestComponent, { message: 'This is from props!' });
+      const element = React.createElement(TestComponent, {
+        title: 'Hello, React!',
+        description: 'This is a dynamic example with an image and button.',
+        buttonText: 'Click Me',
+        buttonLink: '/somewhere',
+        backgroundImage: 'https://www.cvsukltd.co.uk/globalassets/practice-images/gourleys-ashton-about-us.jpg' // Adjust the image path
+      });
       ReactDOM.render(element, root);
     `;
     document.body.appendChild(moduleScript);
   };
 
   // Chain the script loading
+  tailWindScript.onload = () => document.body.appendChild(reactScript);
   reactScript.onload = () => document.body.appendChild(reactDomScript);
-  document.body.appendChild(reactScript);
+  document.body.appendChild(tailWindScript);
 }
