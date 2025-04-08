@@ -3,8 +3,11 @@ export default function decorate(block) {
   console.log('Block dataset:', block.dataset);
   console.log('Inner HTML:', block.innerHTML);
 
-  const title = block.dataset.title || 'Hello, React!';
-  const subtitle = block.dataset.subtitle || 'This is a dynamic example with an image and button.';
+  const titleElement = block.querySelector('[data-aue-prop="title"]');
+  const subtitleElement = block.querySelector('[data-aue-prop="subtitle"]');
+
+  const title = titleElement ? titleElement.textContent : 'Hello, React!';
+  const subtitle = subtitleElement ? subtitleElement.textContent : 'This is a dynamic example with an image and button.';
 
   console.log('title', title);
   console.log('subtitle', subtitle);
@@ -35,8 +38,8 @@ export default function decorate(block) {
 
       const root = document.getElementById('my-partial');
       const element = React.createElement(TestComponent, {
-        title: 'Hello, React!',
-        description: 'This is a dynamic example with an image and button.',
+        title: '${title}',
+        description: '${subtitle}',
         buttonText: 'Click Me',
         buttonLink: '/somewhere',
         backgroundImage: 'https://www.cvsukltd.co.uk/globalassets/practice-images/gourleys-ashton-about-us.jpg' // Adjust the image path

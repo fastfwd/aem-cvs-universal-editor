@@ -22,7 +22,7 @@ export default function Button({
       className: `inline-flex items-center justify-center ${variantClass} ${sizeClass} rounded-full hover:bg-opacity-80 transition ease-in-out duration-200`
     },
     // Button children
-    React.createElement('span', null, children),
+    React.createElement('span', { className: 'text-white' }, children),
     // Add the chevron if required
     chevron && React.createElement('span', { className: 'ml-2' }, chevron)
   );
