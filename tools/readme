@@ -5,3 +5,4 @@
 
 Make sure to run chmod +x for every bash script
 Mock import CountUp from 'react-countup';
+Use import React from 'https://esm.sh/react@18';

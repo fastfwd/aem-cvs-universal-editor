@@ -35,6 +35,15 @@
           "...": "../blocks/*/_*.json#/definitions"
         }
       ]
+    },
+    {
+      "title": "CVS Components",
+      "id": "cvs-components",
+      "components": [
+        {
+          "...": "../blocks/cvs/*/_*.json#/definitions"
+        }
+      ]
     }
   ]
 }

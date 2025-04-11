@@ -1,6 +1,6 @@
 'use client';
 
-import ChevronLink from '../partials/ChevronLink';
+import ChevronLink from '../partials/ChevronLink/index.js';
 function CardLinks({
   cardData
 }) {
