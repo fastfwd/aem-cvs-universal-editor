@@ -1,6 +1,6 @@
 'use client';
 
-import Button from "../partials/Button";
+import Button from "../partials/Button/index.js";
 function RichText({
   title = "",
   description = "",

@@ -21,7 +21,7 @@ export default function decorate(block) {
   const moduleScript = document.createElement('script');
   moduleScript.type = 'module';
   moduleScript.textContent = `
-        import Component from '../scripts/components/StatsSection/index.js';
+        import Component from '/content/cvs-aem.resource/scripts/components/StatsSection/index.js';
   
         const root = document.getElementById('statssection');
         const element = React.createElement(Component, ${JSON.stringify(data)});

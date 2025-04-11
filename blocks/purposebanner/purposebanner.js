@@ -4,29 +4,25 @@ export default function decorate(block) {
   console.log('Inner HTML:', block.innerHTML);
 
   block.innerHTML = `
-      <div id="textandimage" class="textandimage">
+      <div id="purposebanner" class="purposebanner">
         <p>Loading React component...</p>
       </div>
     `;
 
-  // Load React
-  const reactScript = document.createElement('script');
-  reactScript.src = 'https://unpkg.com/react@18/umd/react.production.min.js';
-
   const data = {
-    image: 'https://www.cvsukltd.co.uk/contentassets/01b466e1b6f64cdeb53ced6299dcb80f/west-mount-vet---huddersfield--consultation-room.jpg',
-    title: 'Title',
-    description: 'Description',
-    button: 'Button',
+    title: "Title",
+    description: "Description",
+    buttonText: "Button",
     buttonLink: "Link",
+    backgroundImage: "https://www.cvsukltd.co.uk/contentassets/01b466e1b6f64cdeb53ced6299dcb80f/west-mount-vet---huddersfield--consultation-room.jpg"
   }
 
   const moduleScript = document.createElement('script');
   moduleScript.type = 'module';
   moduleScript.textContent = `
-  import Component from '../scripts/components/TextAndImage/index.js';
+  import Component from '/content/cvs-aem.resource/scripts/components/PurposeBanner/index.js';
 
-  const root = document.getElementById('textandimage');
+  const root = document.getElementById('purposebanner');
   const element = React.createElement(Component, ${JSON.stringify(data)});
   ReactDOM.render(element, root);
 `;

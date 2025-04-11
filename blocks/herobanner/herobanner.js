@@ -4,7 +4,7 @@ export default function decorate(block) {
   console.log('Inner HTML:', block.innerHTML);
 
   block.innerHTML = `
-      <div id="findpracticesbanner" class="findpracticesbanner">
+      <div id="herobanner" class="herobanner">
         <p>Loading React component...</p>
       </div>
     `;
@@ -14,16 +14,16 @@ export default function decorate(block) {
     description: 'Description',
     buttonText: 'Button',
     buttonLink: 'Link',
-    backgroundImage: "https://www.cvsukltd.co.uk/globalassets/practice-images/gourleys-ashton-about-us.jpg",
+    backgroundImage: "https://www.cvsukltd.co.uk/contentassets/01b466e1b6f64cdeb53ced6299dcb80f/west-mount-vet---huddersfield--consultation-room.jpg",
     variant: "grey"
   }
 
   const moduleScript = document.createElement('script');
   moduleScript.type = 'module';
   moduleScript.textContent = `
-  import Component from '../scripts/components/FindPracticesBanner/index.js';
+  import Component from '/content/cvs-aem.resource/scripts/components/HeroBanner/index.js';
 
-  const root = document.getElementById('findpracticesbanner');
+  const root = document.getElementById('herobanner');
   const element = React.createElement(Component, ${JSON.stringify(data)});
   ReactDOM.render(element, root);
 `;

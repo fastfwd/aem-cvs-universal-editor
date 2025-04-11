@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-import Button from "../partials/Button";
+import Button from "../partials/Button/index.js";
 function TextAndImage({
   image = "",
   title = "",

@@ -1,7 +1,8 @@
-export default function decorate(block) {
+export default function decorate(block, model) {
     console.log('Block:', block);
     console.log('Block dataset:', block.dataset);
     console.log('Inner HTML:', block.innerHTML);
+    console.log('Model:', model);
 
     block.innerHTML = `
       <div id="cardlinks" class="cardlinks">
