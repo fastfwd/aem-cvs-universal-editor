@@ -1,12 +1,47 @@
-// import React from 'react';
-import { createRoot } from 'react-dom/client';
-import decorate from '../blocks/testcomponent/testcomponent';
-import TestComponent from "./testcomponent-react";
+import decorateCardLinks from '../blocks/cvs/CardLinks/cardlinks';
+import decorateFindPracticesBanner from '../blocks/cvs/FindPracticesBanner/findpracticesbanner';
+import decorateHeroBanner from '../blocks/cvs/HeroBanner/herobanner';
+import decorateMultiColumnContent from '../blocks/cvs/MultiColumnContent/multicolumncontent';
+import decoratePurposeBanner from '../blocks/cvs/PurposeBanner/purposebanner';
+import decorateRichText from '../blocks/cvs/RichText/richtext';
+import decorateStatsSection from '../blocks/cvs/StatsSection/statssection';
+import decorateTextAndImage from '../blocks/cvs/TextAndImage/textandimage';
+import decorateThreeColumnCards from '../blocks/cvs/ThreeColumnCards/threecolumncards';
 
-// const App = () => <div>Hello, Vite + React!</div>;
+const root = document.querySelector('#root');
 
-const block = document.querySelector('#root');
-decorate(block);
+const cardlinks = document.createElement('div');
+decorateCardLinks(cardlinks);
+root.appendChild(cardlinks);
 
-// const root = createRoot(document.getElementById('root'));
-// root.render(<TestComponent />);
+const findPracticesBanner = document.createElement('div');
+decorateFindPracticesBanner(findPracticesBanner);
+root.appendChild(findPracticesBanner);
+
+const heroBanner = document.createElement('div');
+decorateHeroBanner(heroBanner);
+root.appendChild(heroBanner);
+
+const multiColumnContent = document.createElement('div');
+decorateMultiColumnContent(multiColumnContent);
+root.appendChild(multiColumnContent);
+
+const purposeBanner = document.createElement('div');
+decoratePurposeBanner(purposeBanner);
+root.appendChild(purposeBanner);
+
+const richText = document.createElement('div');
+decorateRichText(richText);
+root.appendChild(richText);
+
+const statsSection = document.createElement('div');
+decorateStatsSection(statsSection);
+root.appendChild(statsSection);
+
+const textAndImage = document.createElement('div');
+decorateTextAndImage(textAndImage);
+root.appendChild(textAndImage);
+
+const threeColumnCards = document.createElement('div');
+decorateThreeColumnCards(threeColumnCards);
+root.appendChild(threeColumnCards);

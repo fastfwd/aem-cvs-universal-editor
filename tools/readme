@@ -1,5 +1,7 @@
 1. clone
 2. rename
 3. transpile
+4. cd to cvs-template and run "npx tailwindcss -c tailwind.config.js -i ./styles/globals.css -o ./tailwind.css" to generate css
 
 Make sure to run chmod +x for every bash script
+Mock import CountUp from 'react-countup';

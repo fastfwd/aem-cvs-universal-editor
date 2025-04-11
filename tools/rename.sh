@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPONENTS_DIR="cvs-templates-sparse/components"
+COMPONENTS_DIR="cvs-templates/components"
 
 # Make sure the components directory exists
 if [ ! -d "$COMPONENTS_DIR" ]; then
