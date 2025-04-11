@@ -24,7 +24,7 @@ export default function decorate(block) {
   const moduleScript = document.createElement('script');
   moduleScript.type = 'module';
   moduleScript.textContent = `
-  import Component from '../scripts/components/TextAndImage/index.js';
+  import Component from '/content/cvs-aem.resource/scripts/components/TextAndImage/index.js';
 
   const root = document.getElementById('textandimage');
   const element = React.createElement(Component, ${JSON.stringify(data)});

@@ -33,7 +33,7 @@ export default function decorate(block) {
     const moduleScript = document.createElement('script');
     moduleScript.type = 'module';
     moduleScript.textContent = `
-    import Component from '../scripts/components/MultiColumnContent/index.js';
+    import Component from '/content/cvs-aem.resource/scripts/components/MultiColumnContent/index.js';
 
     const root = document.getElementById('multicolumncontent');
     const element = React.createElement(Component, ${JSON.stringify(data)});

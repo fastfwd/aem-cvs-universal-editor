@@ -35,7 +35,7 @@ export default function decorate(block) {
   const moduleScript = document.createElement('script');
   moduleScript.type = 'module';
   moduleScript.textContent = `
-    import Component from '../scripts/components/ThreeColumnCards/index.js';
+    import Component from '/content/cvs-aem.resource/scripts/components/ThreeColumnCards/index.js';
 
     const root = document.getElementById('threecolumncards');
     const element = React.createElement(Component, ${JSON.stringify(data)});
