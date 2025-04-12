@@ -5,3 +5,21 @@
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <link rel="stylesheet" href="/styles/styles.css"/>
 <link rel="stylesheet" href="/styles/tailwind.css"/>
+<script type="application/json" id="manifest-json">
+    {
+    "blocks": {
+      "cardlinks": {
+        "path": "./blocks/cardlinks/cardlinks.js",
+        "modelPath": "./models/cardlinks-model.js",
+        "css": "./blocks/cardlinks/cardlinks.css"
+      }
+    }
+  }
+  </script>
+  <script>
+    fetch('/manifest.json')
+      .then((res) => res.json())
+      .then((manifest) => {
+        console.log('Loaded manifest:', manifest);
+      });
+  </script>

@@ -1,0 +1,9 @@
+{
+    "blocks": {
+      "cardlinks": {
+        "path": "./blocks/cardlinks/cardlinks.js",
+        "modelPath": "./models/cardlinks-model.js",
+        "css": "./blocks/cardlinks/cardlinks.css"
+      }
+    }
+  }
