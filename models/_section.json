@@ -50,7 +50,13 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "cardlinks",
+        "findpracticesbanner",
+        "herobanner",
+        "purposebanner",
+        "richtext",
+        "textandimage"
       ]
     }
   ]

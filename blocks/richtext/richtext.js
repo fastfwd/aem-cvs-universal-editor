@@ -1,7 +1,8 @@
+import { splitAemPath } from "../../scripts/utils/json.js";
+
 export default function decorate(block) {
-  console.log('Block:', block);
-  console.log('Block dataset:', block.dataset);
-  console.log('Inner HTML:', block.innerHTML);
+  const { basePath, jcrPath } = splitAemPath(block.dataset.aueResource);
+  if (!basePath || !jcrPath) { return; }
 
   block.innerHTML = `
       <div id="richtext" class="richtext">
@@ -9,25 +10,30 @@ export default function decorate(block) {
       </div>
     `;
 
-  const data = {
-    title: 'Title',
-    description: 'Description',
-    button: 'Button',
-    buttonLink: 'ButtonLink',
-    button2: 'Button2',
-    buttonLink2: 'ButtonLink2',
-    button3: 'Button3',
-    buttonLink3: 'ButtonLink3',
-  }
+  fetch(`${basePath}${jcrPath}.json`)
+    .then(response => response.json())
+    .then(model => {
+      const data = {
+        title: model.title ?? 'Title',
+        description: model?.description ?? 'Description',
+        button: model?.button1Title ?? 'Button 1',
+        buttonLink: model?.button1Link ?? 'ButtonLink',
+        button2: model?.button2Title ?? 'Button 2',
+        buttonLink2: model?.button2Link ?? 'ButtonLink2',
+        button3: model?.button3Title ?? 'Button 3',
+        buttonLink3: model?.button3Link ?? 'ButtonLink3',
+      }
 
-  const moduleScript = document.createElement('script');
-  moduleScript.type = 'module';
-  moduleScript.textContent = `
+      const moduleScript = document.createElement('script');
+      moduleScript.type = 'module';
+      moduleScript.textContent = `
   import Component from '/content/cvs-aem.resource/scripts/components/RichText/index.js';
 
   const root = document.getElementById('richtext');
   const element = React.createElement(Component, ${JSON.stringify(data)});
   ReactDOM.render(element, root);
 `;
-  document.body.appendChild(moduleScript);
+      document.body.appendChild(moduleScript);
+    }) // Log the data to the console
+    .catch(error => console.error('Error fetching the content:', error));
 }

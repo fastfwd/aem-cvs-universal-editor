@@ -142,6 +142,18 @@
     ]
   },
   {
+    "id": "cardlinks",
+    "fields": [
+      {
+        "component": "link",
+        "valueType": "string[]",
+        "name": "links",
+        "label": "Links",
+        "multi": true
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -180,6 +192,57 @@
     ]
   },
   {
+    "id": "findpracticesbanner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "variant",
+        "label": "Variant",
+        "options": [
+          {
+            "name": "grey",
+            "value": "grey"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -212,6 +275,259 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "herobanner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "value": ""
+      },
+      {
+        "component": "select",
+        "name": "variant",
+        "label": "Variant",
+        "options": [
+          {
+            "name": "grey",
+            "value": "grey"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "purposebanner",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "richtext",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button1Title",
+        "label": "Button 1 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button1Link",
+        "label": "Button 1 Link",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button2Title",
+        "label": "Button 2 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button2Link",
+        "label": "Button 2 Link",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button3Title",
+        "label": "Button 3 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button3Link",
+        "label": "Button 3 Link",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "statssection",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat1Title",
+        "label": "Stat 1 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat1Value",
+        "label": "Stat 1 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat2Title",
+        "label": "Stat 2 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat2Value",
+        "label": "Stat 2 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat3Title",
+        "label": "Stat 3 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat3Value",
+        "label": "Stat 3 Value",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat4Title",
+        "label": "Stat 4 Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "stat4Value",
+        "label": "Stat 4 Value",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "textandimage",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonText",
+        "label": "Button Text",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLink",
+        "label": "Button Link",
+        "value": ""
       }
     ]
   }

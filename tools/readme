@@ -3,6 +3,7 @@
 3. transpile
 4. cd to cvs-template and run "npx tailwindcss -c tailwind.config.js -i ./styles/globals.css -o ./tailwind.css" to generate css
 5. remove import React
+6. do not edit component-definition.json, component-filters.json, component-models.json, these are automatically updated in pre-commit husky script based on /models and /blocks
 
 Make sure to run chmod +x for every bash script
 Mock import CountUp from 'react-countup';

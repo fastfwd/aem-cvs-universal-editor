@@ -1,0 +1,62 @@
+{
+    "definitions": [
+        {
+            "title": "PurposeBanner",
+            "id": "purposebanner",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "PurposeBanner",
+                            "model": "purposebanner"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "purposebanner",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "backgroundImage",
+                    "label": "Background Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "title",
+                    "label": "Title",
+                    "value": ""
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "description",
+                    "label": "Description",
+                    "value": ""
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "buttonText",
+                    "label": "Button Text",
+                    "value": ""
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "buttonLink",
+                    "label": "Button Link",
+                    "value": ""
+                }
+            ]
+        }
+    ],
+    "filters": []
+}
