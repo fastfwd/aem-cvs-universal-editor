@@ -9,7 +9,23 @@
                         "resourceType": "core/franklin/components/block/v1/block",
                         "template": {
                             "name": "CardLinks",
-                            "model": "cardlinks"
+                            "filter": "cardlinks"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "CardLinksItem",
+            "id": "cardlinksitem",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/item",
+                        "template": {
+                            "name": "CardLinksItem",
+                            "model": "cardlinksitem",
+                            "filter": "cardlinksitem"
                         }
                     }
                 }
@@ -18,17 +34,45 @@
     ],
     "models": [
         {
-            "id": "cardlinks",
+            "id": "cardlinksitem",
             "fields": [
                 {
-                    "component": "link",
-                    "valueType": "string[]",
-                    "name": "links",
-                    "label": "Links",
-                    "multi": true
+                    "component": "text",
+                    "name": "title",
+                    "value": "",
+                    "label": "Title",
+                    "valueType": "string"
+                },
+                {
+                    "component": "container",
+                    "label": "Buttons",
+                    "name": "buttons",
+                    "valueType": "object",
+                    "multi": true,
+                    "fields": [
+                        {
+                            "component": "text",
+                            "name": "title",
+                            "label": "Button Label",
+                            "valueType": "string"
+                        },
+                        {
+                            "component": "text",
+                            "name": "link",
+                            "label": "Button Link",
+                            "valueType": "string"
+                        }
+                    ]
                 }
             ]
         }
     ],
-    "filters": []
+    "filters": [
+        {
+            "id": "cardlinks",
+            "components": [
+                "cardlinksitem"
+            ]
+        }
+    ]
 }

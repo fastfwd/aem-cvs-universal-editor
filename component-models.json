@@ -142,14 +142,35 @@
     ]
   },
   {
-    "id": "cardlinks",
+    "id": "cardlinksitem",
     "fields": [
       {
-        "component": "link",
-        "valueType": "string[]",
-        "name": "links",
-        "label": "Links",
-        "multi": true
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "label": "Buttons",
+        "name": "buttons",
+        "valueType": "object",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Button Label",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Button Link",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   },
@@ -169,6 +190,27 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "container",
+        "label": "Buttons",
+        "name": "buttons",
+        "valueType": "object",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Button Label",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link",
+            "label": "Button Link",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   },

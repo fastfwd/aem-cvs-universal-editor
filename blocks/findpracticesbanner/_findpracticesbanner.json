@@ -20,7 +20,7 @@
         {
             "id": "findpracticesbanner",
             "fields": [
-                {
+               {
                     "component": "reference",
                     "valueType": "string",
                     "name": "backgroundImage",

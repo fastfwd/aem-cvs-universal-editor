@@ -25,6 +25,12 @@
     ]
   },
   {
+    "id": "cardlinks",
+    "components": [
+      "cardlinksitem"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
