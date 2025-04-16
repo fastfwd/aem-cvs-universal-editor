@@ -1,4 +1,3 @@
-import { createElement } from 'react';
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
@@ -12,6 +11,36 @@ export default function decorate(block) {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
     });
+
+    const container = document.createElement('div');
+    container.setAttribute('data-name', 'buttons');
+    container.setAttribute('data-aue-prop', 'buttons');
+    container.setAttribute('data-aue-label', 'Buttons');
+
+    // Create one button item inside the multi container
+    const buttonItem = document.createElement('div');
+    buttonItem.setAttribute('data-aue-model', 'buttons'); // Important for nested items
+    buttonItem.setAttribute('data-aue-label', 'Button');
+
+    // Button title
+    const title = document.createElement('p');
+    title.setAttribute('data-name', 'title');
+    title.setAttribute('data-aue-prop', 'title');
+    title.setAttribute('data-aue-label', 'Button Title');
+    title.textContent = 'Example Button';
+
+    // Button link
+    const link = document.createElement('p');
+    link.setAttribute('data-name', 'link');
+    link.setAttribute('data-aue-prop', 'link');
+    link.setAttribute('data-aue-label', 'Button Link');
+    link.textContent = 'https://example.com';
+
+    buttonItem.append(title, link);
+    container.append(buttonItem);
+
+    li.append(container);
+
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
@@ -21,25 +50,4 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
-
-
-  const container = document.createElement('div');
-container.setAttribute('data-name', 'buttons');
-
-const item = document.createElement('div');
-
-const title = document.createElement('span');
-title.setAttribute('data-name', 'title');
-title.textContent = 'Button title here';
-
-const link = document.createElement('a');
-link.setAttribute('data-name', 'link');
-link.href = 'https://example.com';
-link.textContent = 'https://example.com';
-
-item.appendChild(title);
-item.appendChild(link);
-container.appendChild(item);
-  
-block.append(container);
 }
