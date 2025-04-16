@@ -1,8 +1,8 @@
+import { createElement } from 'react';
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
-  /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
@@ -21,4 +21,25 @@ export default function decorate(block) {
   });
   block.textContent = '';
   block.append(ul);
+
+
+  const container = document.createElement('div');
+container.setAttribute('data-name', 'buttons');
+
+const item = document.createElement('div');
+
+const title = document.createElement('span');
+title.setAttribute('data-name', 'title');
+title.textContent = 'Button title here';
+
+const link = document.createElement('a');
+link.setAttribute('data-name', 'link');
+link.href = 'https://example.com';
+link.textContent = 'https://example.com';
+
+item.appendChild(title);
+item.appendChild(link);
+container.appendChild(item);
+  
+block.append(container);
 }
